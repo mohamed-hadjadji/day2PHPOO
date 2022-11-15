@@ -1,0 +1,14 @@
+#### Création d'une applicaion PHP avec les Objets, DAO et PDO
+
+1)Créer une classe Connexion avec PDO  : DONE
+
+
+2)Créer une Classe Produit(id, libelle, prix, quantite)  DONE
+
+
+3)Créer une classe DaoProduit avec les méthodes : createProduit(Produit produit), listProduit(), deleteProduit(Produit produit), updateProduit(Produit produit)
+
+
+4)MVC DONE
+
+5)Classe User pour l'authentification  "Mercredi"

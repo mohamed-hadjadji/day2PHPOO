@@ -49,6 +49,25 @@ class DaoProduit{
         //appel au PDO pour faire la suppression
     }
 
+    public function listProduitId($id)
+    {
+        //appel au PDO pour faire l'affichage
+
+        $produits=array();
+        $i=0;
+        $pdoConnexion = new PDOConnexion();
+        $pdo = $pdoConnexion->createConnexion();
+        $strSQL = "SELECT * FROM produit WHERE id='".$id."'";
+        //execution de la requête et affichage des résultats
+        foreach ($pdo->query($strSQL) as $row) {
+            $produit = new Produit($row['libelle'],$row['prix'],$row['quantite']);
+            $produit->setId($row['id']);
+            $produits[$i]=$produit;
+            $i++;
+        }
+        return $produits;
+    }
+
     public function updateProduit(Produit $produit)
     {
         //appel au PDO pour faire la mise à jour

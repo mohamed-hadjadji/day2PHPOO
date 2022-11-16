@@ -14,7 +14,7 @@ $produits = $manager->listProduit();
 ?>
 
 <table align="center" border="1">
-<tr><th>ID</th><th>Libelle</th><th>Prix</th><th>Quantite</th></tr>
+<tr><th>ID</th><th>Libelle</th><th>Prix</th><th>Quantite</th><th>Modifier</th><th>Supprimer</th></tr>
 <?php
 foreach($produits as $produit)
 {
@@ -23,6 +23,8 @@ foreach($produits as $produit)
     echo"<td>".  $produit->getLibelle()."</td>";
     echo"<td>".  $produit->getPrix()."</td>";
     echo"<td>".  $produit->getQuantite()."</td>";
+    echo"<td><a href = Views/formUpdateProduit.php?id=".$produit->getId().">Edit</a>";
+    echo"<td><a href = >Supp</a>";
     echo"</tr>";
    
 }
